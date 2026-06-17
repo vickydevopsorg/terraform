@@ -16,9 +16,10 @@ provider "null" {
 }
 
 module "provider_test" {
-	source = "../module"
-	# comment and uncomment the below block to test behavior when one required provider mapping is missing
-	providers = {
-		null.secondary = null.secondary
-	}
+	source = "./module"
+
+	# commenting out the provider mapping to null.primary to test behavior when one required provider mapping is missing.
+	# providers = {
+	# 	null.secondary = null.secondary
+	# }
 }
